@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/registro.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Registro</title>
+</head>
+
+<body>
+
+    <Nav id="menu-navegacion">
+        <a href="index.html" id="logo">Logo Compañía</a>
+        <div class="navbar-right">
+            <a href="index.html">Inicio</a>
+            <a href="login.html">Login</a>
+            <a href="registro.html" class="active">Registro</a>
+            <a href="dashboard.html">Dashboard</a>
+        </div>
+    </Nav>
+    <main>
+        <form id="regForm" action="index.html">
+
+            <h1>Register:</h1>
+            <div class="tab">
+                <label for="email">Email:</label>
+                <input id="email" type="email" placeholder="pepito@ejemplo.com" required oninput="this.className = ''">
+
+                <label for="password">Contraseña:</label>
+                <input id="password" type="password" placeholder="°°°°°°°°°°" required oninput="this.className = ''">
+
+                <label for="password1">Confirma contraseña:</label>
+                <input id="password1" type="password" placeholder="°°°°°°°°°°" required oninput="this.className = ''">
+
+            </div>
+
+            <div class="tab">
+                <label for="name">Nombre:</label>
+                <input id="name" type="text" placeholder="Pepito" required oninput="this.className = ''">
+
+                <label for="lastname">Apellidos</label>
+                <input id="lastname" type="text" placeholder="Perez Ossa" required oninput="this.className = ''">
+            </div>
+
+            <div class="tab">
+                <label for="telefono">teléfono:</label>
+                <input id="telefono" type="tel" required oninput="this.className = ''">
+
+                <label for="nacimiento">Fecha de nacimiento:</label>
+                <input id="nacimiento" type="date"  required oninput="this.className = ''">
+            </div>
+
+            <div style="overflow:auto;">
+                <div style="float:right;">
+                    <button type="button" id="prevBtn" onclick="nextPrev(-1)">Atrás</button>
+                    <button type="button" id="nextBtn" onclick="nextPrev(1)">siguiente</button>
+                </div>
+            </div>
+
+            <div style="text-align:center;margin-top:40px;">
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+            </div>
+
+        </form>
+        <!--
+        <section class="contenedor-reg">
+
+            <form id="regForm" action="">
+                <div class="contenedor-texto">
+                    <div class="registro">Registro:</div>
+                </div>
+                <div style="text-align:center;margin-top:40px;">
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                </div>
+
+                 One "tab" for each step in the form: 
+                <div class="tab">
+                    <div class="cont-reg">
+                        <label for="email">Email:</label>
+                        <input id="email" type="email" placeholder="pepito@ejemplo.com" required
+                            oninput="this.className = ''">
+
+                        <label for="password">Contraseña:</label>
+                        <input id="password" type="password" placeholder="°°°°°°°°°°" required
+                            oninput="this.className = ''">
+
+                        <label for="password">Confirma contraseña:</label>
+                        <input id="password" type="password" placeholder="°°°°°°°°°°" required
+                            oninput="this.className = ''">
+
+                        <div class="lower">
+                            <input id="nextBtn" type="submit" onclick="nextPrev(1)" value="siguiente">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab">
+                    <div class="cont-reg">
+                        <p><input placeholder="E-mail..." oninput="this.className = ''"></p>
+                        <p><input placeholder="Phone..." oninput="this.className = ''"></p>
+                        <div class="lower">
+                            <input id="nextBtn" type="submit" onclick="nextPrev(1)" value="siguiente">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab">
+                    <div class="cont-reg">
+                        <p><input placeholder="dd" oninput="this.className = ''"></p>
+                        <p><input placeholder="mm" oninput="this.className = ''"></p>
+                        <p><input placeholder="yyyy" oninput="this.className = ''"></p>
+                        <div class="lower">
+                            <input id="nextBtn" type="submit" onclick="nextPrev(1)" value="siguiente">
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </section>-->
+
+        <!--
+        <form class="contenedor-login" id="reg">
+            <div class="contenedor-texto">
+
+                <div class="login">Registro</div>
+
+            </div>
+            <div class="right">
+                    <label for="email">Email:</label>
+                    <input id="email" type="email" placeholder="pepito@ejemplo.com" required oninput="this.className = ''">
+
+                    <label for="password">Contraseña:</label>
+                    <input id="password" type="password" placeholder="°°°°°°°°°°" required oninput="this.className = ''">
+
+                    <label for="password">Confirma contraseña:</label>
+                    <input id="password" type="password" placeholder="°°°°°°°°°°" required oninput="this.className = ''">
+
+                    <div class="lower">
+                        <input id="submit" type="submit" value="siguiente">
+                    </div>
+                </form>
+            </div>
+
+            <div class="right">
+                <form>
+                    <label for="name">Email:</label>
+                    <input id="name" type="email" placeholder="pepito@ejemplo.com" required oninput="this.className = ''">
+
+                    <label for="password">Contraseña:</label>
+                    <input id="password" type="password" placeholder="°°°°°°°°°°" required oninput="this.className = ''">
+
+                    <label for="password">Confirma contraseña:</label>
+                    <input id="password" type="password" placeholder="°°°°°°°°°°" required oninput="this.className = ''">
+
+                    <div class="lower">
+                        <input id="submit" type="submit" value="siguiente">
+                    </div>
+                </form>
+            </div>
+
+            <div class="right">
+                <form>
+                    <label for="name">Email:</label>
+                    <input id="" type="email" placeholder="pepito@ejemplo.com" required oninput="this.className = ''">
+
+                    <label for="password">Contraseña:</label>
+                    <input id="password" type="password" placeholder="°°°°°°°°°°" required oninput="this.className = ''">
+
+                    <label for="password">Confirma contraseña:</label>
+                    <input id="password" type="password" placeholder="°°°°°°°°°°" required oninput="this.className = ''">
+
+                    <div class="lower">
+                        <input id="submit" type="submit" value="siguiente">
+                    </div>
+                </form>
+            </div>
+
+            <div style="text-align:center;margin-top:40px;">
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+            </div>
+
+        </form>-->
+    </main>
+    <footer id="contacto">
+        <div class="contenedor footer-content">
+            <div class="contact-us">
+                <h2 class="brand">MARCA</h2>
+                <p>Lorem ipsum dolor sit amet consectetur</p>
+            </div>
+            <div class="social-media">
+                <a href="./" class="social-media-icon">
+                    <i class='bx bxl-facebook'></i>
+                </a>
+                <a href="./" class="social-media-icon">
+                    <i class='bx bxl-twitter'></i>
+                </a>
+                <a href="./" class="social-media-icon">
+                    <i class='bx bxl-instagram'></i>
+                </a>
+            </div>
+        </div>
+        <div class="line"></div>
+    </footer>
+    <script src="js/menu.js"></script>
+    <script src="JS/registro.js"></script>
+</body>
+
+</html>
